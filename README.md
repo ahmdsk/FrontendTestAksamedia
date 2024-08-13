@@ -9,6 +9,11 @@ npm install
 npm run dev
 ```
 
+```
+username: admin
+password: admin
+```
+
 Setelah itu local server akan berjalan di port 5173
 http://localhost:5173
 
