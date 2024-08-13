@@ -2,6 +2,8 @@
 
 Paduan Download dan Install Dependensi yang dibbutuhkan dengan cara dibawah
 
+DEMO: [Frontend Test Aksamedia](https://frontend-test-aksamedia.vercel.app/)
+
 ```sh
 git clone https://github.com/ahmdsk/FrontendTestAksamedia
 cd FrontendTestAksamedia
