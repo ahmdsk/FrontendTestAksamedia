@@ -42,17 +42,17 @@ function Login() {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-slate-50">
-      <div className="bg-white p-8 rounded-xl w-[500px]">
+    <div className="flex justify-center items-center h-screen bg-slate-50 dark:bg-slate-600">
+      <div className="bg-white dark:bg-slate-700 p-8 rounded-xl w-[500px]">
         <div className="flex flex-col gap-y-2">
           <div className="w-14">
             <img src={ReactLogo} alt="React Logo" className="w-full" />
           </div>
           <div className="flex flex-col">
-            <h1 className="text-zinc-700 font-medium text-lg">
+            <h1 className="text-zinc-700 dark:text-slate-200 font-medium text-lg">
               Halo! Selamat Datang Kembali
             </h1>
-            <h1 className="text-zinc-700 text-sm">
+            <h1 className="text-zinc-700 dark:text-slate-200 text-sm">
               Silahkan masukan username dan password anda untuk melanjutkan.
             </h1>
           </div>

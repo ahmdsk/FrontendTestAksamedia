@@ -53,9 +53,9 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="bg-slate-50 h-screen">
-      <div className="bg-white py-2 px-12 flex justify-between items-center">
-        <h1 className="font-extrabold">ContactKu.</h1>
+    <div className="bg-slate-50 dark:bg-slate-600 h-screen">
+      <div className="bg-white dark:bg-slate-700 py-2 px-12 flex justify-between items-center">
+        <h1 className="font-extrabold dark:text-white">ContactKu.</h1>
         <AvatarDropdown />
       </div>
       <div className="m-4 flex justify-center items-start space-x-3">
