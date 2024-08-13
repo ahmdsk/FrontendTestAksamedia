@@ -1,5 +1,6 @@
 import React, { useState, useEffect, ChangeEvent } from "react";
 import { Contact } from "../types/contact";
+import { Edit, Trash } from "lucide-react";
 
 interface ContactTableProps {
   contacts: Contact[];
@@ -66,13 +67,13 @@ const ContactTable: React.FC<ContactTableProps> = ({
                   onClick={() => onEdit(contact)}
                   className="mr-2 text-blue-500"
                 >
-                  Edit
+                  <Edit className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => onDelete(contact.id)}
                   className="text-red-500"
                 >
-                  Delete
+                  <Trash className="w-4 h-4" />
                 </button>
               </td>
             </tr>

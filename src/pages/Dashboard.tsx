@@ -54,12 +54,12 @@ export default function Dashboard() {
 
   return (
     <div className="bg-slate-50 dark:bg-slate-600 h-screen">
-      <div className="bg-white dark:bg-slate-700 py-2 px-12 flex justify-between items-center">
+      <div className="bg-white dark:bg-slate-700 py-2 px-4 md:px-12 flex justify-between items-center">
         <h1 className="font-extrabold dark:text-white">ContactKu.</h1>
         <AvatarDropdown />
       </div>
-      <div className="m-4 flex justify-center items-start space-x-3">
-        <div className="w-[400px] bg-white p-4 rounded-lg">
+      <div className="m-4 flex flex-col md:flex-row justify-center items-start space-y-3 md:space-x-3">
+        <div className="w-full md:w-[400px] bg-white p-4 rounded-lg">
           <h1 className="font-bold">Form Kontak</h1>
           <hr className="my-2" />
           <ContactForm onSave={saveContact} editContact={editContact} />
