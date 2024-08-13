@@ -1,24 +1,39 @@
-import { useState } from "react";
-import ReactLogo from "./assets/react.svg";
-import InputForm from "./components/input-form";
+import { useEffect, useState } from "react";
+import ReactLogo from "../assets/react.svg";
+import InputForm from "../components/input-form";
 import toast from "react-hot-toast";
 
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+  // Check if user already login
+  useEffect(() => {
+    if (localStorage.getItem("isLogin")) {
+      window.location.href = "/dashboard";
+    }
+  }, []);
+
   const handleLogin = () => {
     // Validation if username and password is empty
-    if(username === "" || password === "") {
+    if (username === "" || password === "") {
       toast.error("Username dan Password tidak boleh kosong");
       return;
     }
 
     // Validation if username and password is incorrect
-    if(username === "admin" && password === "admin") {
+    if (username === "admin" && password === "admin") {
       toast.success("Login Berhasil");
       localStorage.setItem("isLogin", "true");
-      localStorage.setItem("user", JSON.stringify({ username, password }));
+      localStorage.setItem(
+        "user",
+        JSON.stringify({
+          username,
+          password,
+          nama_lengkap: "Admin Ganteng",
+          role: "admin",
+        })
+      );
 
       window.location.href = "/dashboard";
     } else {
